@@ -2,11 +2,12 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	concat = require('gulp-concat'),
 	browserify = require('gulp-browserify'),
-	connect = require('gulp-connect')
+	connect = require('gulp-connect'),
+	mustache = require('mustache')
 	
 
 var jsSources = [
-	'components/scripts/*.js'
+	'components/scripts/*.js' //Or type each in order in case there are issues
 ];
 
 var sassSources = [
@@ -57,11 +58,6 @@ gulp.task('connect', function(){
 
 gulp.task('html', function(){
 	gulp.src(htmlSources)
-		.pipe(connect.reload())
-});
-
-gulp.task('css', function(){
-	gulp.src(cssSources)
 		.pipe(connect.reload())
 });
 
