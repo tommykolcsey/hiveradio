@@ -1,0 +1,11 @@
+{
+  "name": "hiveradio",
+  "version": "1.0.0",
+  "description": "Hive Radio Manchester is Manchester Metropolitan University's student-led online radio",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Tamas Kolcsey",
+  "license": "ISC"
+}
