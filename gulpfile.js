@@ -1,9 +1,10 @@
-var gulp = require('gulp'),
-	gutil = require('gulp-util'),
-	concat = require('gulp-concat'),
-	browserify = require('gulp-browserify'),
-	connect = require('gulp-connect'),
-	mustache = require('mustache')
+var gulp = require('gulp');
+	gutil = require('gulp-util');
+	concat = require('gulp-concat');
+	browserify = require('gulp-browserify');
+	connect = require('gulp-connect');
+	mustache = require('mustache');
+	sass = require('gulp-sass')
 	
 
 var jsSources = [
@@ -30,21 +31,21 @@ gulp.task('js', function(){
 		.pipe(connect.reload())
 });
 
-//gulp.task('compass', function(){
-//	gulp.src(sassSources)
-//		.pipe(compass({
-//			sass: 'components/sass',
-//			image: 'builds/development/img',
-//			style: 'expanded'
-//		}))
-//		.on('error', gutil.log)
-//		.pipe(gulp.dest('builds/development/css'))
-//		.pipe(connect.reload())
-//});
+gulp.task('sass', function(){
+	gulp.src(sassSources)
+		.pipe(sass({
+			includePaths: require('node-reset-scss').includePath,
+			sass: 'components/sass',
+			style: 'expanded'
+		}))
+		.on('error', sass.logError)
+		.pipe(gulp.dest('builds/development/css'))
+		.pipe(connect.reload())
+});
 
 gulp.task('watch', function() {
-	gulp.watch(jsSources, ['js']);
-	gulp.watch('components/sass/*.scss',['compass']); 
+	gulp.watch(jsSources, ['js']); // Might have to edit in case of new js files
+	gulp.watch('components/sass/*.scss',['sass']); 
 	gulp.watch(htmlSources, ['html']);
 	gulp.watch(jsonSources, ['json']);
 });
@@ -66,4 +67,4 @@ gulp.task('json', function(){
 		.pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'css', 'js', 'watch', 'connect'])
+gulp.task('default', ['html', 'sass', 'js', 'json', 'watch', 'connect'])

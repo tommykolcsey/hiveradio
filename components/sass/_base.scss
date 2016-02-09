@@ -1,0 +1,48 @@
+// Fonts ---------------------------
+@import url(https://fonts.googleapis.com/css?family=Kreon:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500);
+
+// Selection -------------------------------------------------------------------
+::selection {
+  background: #fff; 
+  color: #000;
+}
+::-moz-selection {
+  background: #fff; 
+  color: #fdb415;
+}
+
+// HTML & Body ----------------------------------------------------------
+html {
+	height: 100%;
+    font-size: 16px;
+}
+
+body {
+	@include bgImg('../img/bg.jpg');
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', Helvetica, sans-serif; 
+	font-size: 1em;
+}
+
+// Headings ----------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Kreon', serif;
+	font-weight: 700;
+}
+h3 {
+    font-size: 2em;
+    color: #fff;
+}
+h4 {
+    font-size: 1.3em;
+    color: #fdb415;
+}
+
+// Container --------------------------------------------------------------------
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+

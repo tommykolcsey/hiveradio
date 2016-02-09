@@ -13,7 +13,11 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.3.1",
-    "gulp-util": "^3.0.7",
+    "gulp-sass": "^2.2.0",
+    "gulp-util": "^3.0.7"   
+  },
+  "dependencies": {
+    "node-reset-scss": "^1.0.1",
     "jquery": "^2.2.0",
     "mustache": "^2.2.1"
   }

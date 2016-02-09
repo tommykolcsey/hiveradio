@@ -1,0 +1,112 @@
+
+// Main Navigation (Index.html) ------------------------------------------------------------
+
+.main-nav {
+    width: 590px;
+    margin: 0 auto;
+    margin-top: 170px;
+    a {
+	    color: #fff;
+	    font-family: 'Kreon', serif;
+	    font-weight: 700;
+	    font-size: 1.5em;
+	    text-decoration: none;
+		&:hover {
+	    color: #000;
+		}//a:hover
+	}//a
+}//main-nav
+
+.hex-row {
+    clear: left;
+}
+
+.hex {
+	@include transitionAll;
+    background: url('../img/hexagon.png') no-repeat center;
+    width: 230px;
+    height: 200px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &:hover {
+	    background: url('../img/hexagon-hover.png') no-repeat center;
+	    height: 200px;
+	    width: 230px;
+	    }// :hover
+}// hex
+
+.hex-mid {
+    background: url('../img/logo.png') no-repeat center;
+    width: 230px;
+    height: 200px;
+    float: left;
+    margin-left: -50px;
+    margin-top: 105px;
+}// hex-mid
+
+.hex-blog {
+    margin-left: -50px;
+}// hex-blog
+
+.hex-hive {
+    margin-top: -95px;
+}// hex-hive
+
+.hex-contact {
+    margin-left: 130px;
+    margin-top: -95px;
+}// hex-contact
+
+.logotxt {
+    background: url('../img/logo-text.png') no-repeat center;
+    width: 170px;
+    height: 76px;
+    float: left;
+    margin-right: -170px;
+    margin-left: -20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 99;
+}// logotxt
+
+.hex-listen:hover span {
+    color: #fff !important;
+}
+
+// Secondary Navigation ----------------------------------------------------------------
+header {
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+    background: #000;
+    border-bottom: 2px solid #fdb415;
+    nav {
+	    float: right;
+	    margin-top: 20px;
+	    li {
+		    display: inline;
+		    margin-right: 30px;
+			}//li
+		a {
+		    font-family: 'Ubuntu', Helvetica, sans-serif;
+		    font-weight: 500;
+		    font-size: 1.1em;
+		    color: #fff;
+		    text-decoration: none;
+		    &:hover {
+			    color: #fdb415;
+					}//:hover
+		  }	// a
+		}// nav
+}// header
+
+#logo {
+    float: left;
+    img {
+    	height: 50px;
+    	}// img
+}// #logo
