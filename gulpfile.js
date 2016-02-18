@@ -8,7 +8,8 @@ var gulp = require('gulp');
 	
 
 var jsSources = [
-	'components/scripts/*.js' //Or type each in order in case there are issues
+	'components/scripts/slick.min.js',
+	'components/scripts/main.js'
 ];
 
 var sassSources = [
@@ -16,7 +17,8 @@ var sassSources = [
 ];
 
 var htmlSources = [
-	'builds/development/*.html'
+	'builds/development/*.html',
+	'builds/development/pages/*.html'
 ];
 
 var jsonSources = [
@@ -26,7 +28,7 @@ var jsonSources = [
 gulp.task('js', function(){
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
-		.pipe(browserify())
+		//.pipe(browserify())
 		.pipe(gulp.dest('builds/development/js'))
 		.pipe(connect.reload())
 });
@@ -34,7 +36,6 @@ gulp.task('js', function(){
 gulp.task('sass', function(){
 	gulp.src(sassSources)
 		.pipe(sass({
-			includePaths: require('node-reset-scss').includePath,
 			sass: 'components/sass',
 			style: 'expanded'
 		}))

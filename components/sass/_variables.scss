@@ -1,5 +1,17 @@
+// Fonts ---------------------
+@import url(https://fonts.googleapis.com/css?family=Kreon:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500);
+$Ubuntu		: 'Ubuntu', Helvetica, sans-serif;
+$Kreon		: 'Kreon', serif;
+
 // Colours ---------------------
-$orange		: #fdb415;
-$active 	: #373737;
+$orange			: #fdb415;
+$active 		: #373737;
+$light-black	: #121212;
+$lighter-black	: #1b1b1b;
 
-
+// Breakpoints ---------------------
+$break-xs	:320px;
+$break-s	:480px;
+$break-m	:768px;
+$break-l	:992px;
