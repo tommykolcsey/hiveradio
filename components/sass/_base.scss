@@ -24,10 +24,9 @@ body {
   // Sticky Footer Code Adapter From: http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
   @include flexbox;
   clear: both;
-  //min-height: 100vh;
   flex-direction: column;
   -webkit-flex-direction: column;
-  display: block;
+  min-height: 100vh;
   // End Sticky Footer Code
   background-attachment: fixed;
 	margin: 0;
@@ -38,23 +37,18 @@ body {
 }// body
 
 // Sticky Footer Code Adapter From: http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
-main {
+#maincontent {
   flex: 1;
   -webkit-flex: 1;
 }
 // End Sticky Footer Code
 
 footer {
-  position: relative;
-  bottom:0;
-  left: 0;
-  right:0;
   background: $lighter-black;
   width: 100%;
   color: #aaa;
   padding: 40px 0;
   margin-top: 6%;
-  clear: both;
   .copyright {
     width: 100%;
     text-align: center;
@@ -131,7 +125,7 @@ h4 {
     }
 }
 .container-nav
-{
+{   
     width: 70%;
     margin: 0 auto;
 }
@@ -148,6 +142,7 @@ h4 {
 
 
 // Column Span --------------------------------------------------------------------
+//Adapted from the Bootsrap Framework due to responsiveness.
 .row {
   display: table;
   content: '';
@@ -266,7 +261,9 @@ h4 {
     clip: rect(0,0,0,0);
     border: 0;
 }
+
 #skiptocontent {
+  // Code Source: http://daviddickball.uk/2013/04/dont-do-skip-to-content-links-wrong/
   height: 1px;
   width: 1px;
   position: absolute;
@@ -326,6 +323,7 @@ h4 {
               min-width: 57px;
               }// navbrand
           }// nav-header
+
         .navbar{
             padding-top:17px;
             float: right;
@@ -353,7 +351,7 @@ h4 {
             @include transformRotate(0deg);
             display: block;
             position: relative;
-            margin-top: 8px;
+            top: 8px;
             right: -45%;
             content: '';
             width: 0;
@@ -364,13 +362,13 @@ h4 {
         } // triangle
         .triangle-down {
             @include transformRotate(180deg);
-            margin-top:20px;
+            top:22px;
         }// triangle-down
 
-        .dropdown-menu {
+        .dropdown-menu { 
             position: absolute;
             width: 100%;
-            top: 72px;
+            top: 74px;
             right: 0px;
             padding: 10px 10px 10px 0;
             text-align: right;
@@ -397,7 +395,6 @@ h4 {
             display: none;
             float: left;
             background-color: $lighter-black;
-            
             margin-top: 11px;
             margin-bottom:10px;
             width: 100%;
