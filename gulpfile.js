@@ -28,7 +28,6 @@ var jsonSources = [
 gulp.task('js', function(){
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
-		//.pipe(browserify())
 		.pipe(gulp.dest('builds/development/js'))
 		.pipe(connect.reload())
 });
@@ -45,7 +44,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('watch', function() {
-	gulp.watch(jsSources, ['js']); // Might have to edit in case of new js files
+	gulp.watch(jsSources, ['js']); 
 	gulp.watch('components/sass/*.scss',['sass']); 
 	gulp.watch(htmlSources, ['html']);
 	gulp.watch(jsonSources, ['json']);

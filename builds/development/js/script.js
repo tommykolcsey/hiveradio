@@ -65,7 +65,7 @@ $(document).ready(function(){
        $('.slider-for').slick({
         draggable: true,
         slidesToShow: 1,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         fade: true,
         asNavFor: '.slider-nav',
         

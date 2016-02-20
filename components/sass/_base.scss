@@ -34,12 +34,16 @@ body {
 	font-family: $Ubuntu; 
 	font-size: 1em;
   color: #aaa;
+  @media screen and (min-width: $break-xs) {
+    
+  }
 }// body
 
 // Sticky Footer Code Adapter From: http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 #maincontent {
   flex: 1;
   -webkit-flex: 1;
+  padding-bottom:50px; 
 }
 // End Sticky Footer Code
 
@@ -89,7 +93,7 @@ footer {
 #mainContent {
   display: block;
   clear:both;
-}
+}// mainContent
 // Anchors ----------------------------------------------------------------------
 a {
   color: $orange;
@@ -114,14 +118,18 @@ h4 {
 }
 
 // Containers --------------------------------------------------------------------
+
 .container {
     width: 70%;
     margin: 0 auto;
-    @media screen and (max-width: $break-xs) {
-      width: 95%;
-    }
-    @media screen and (max-width: 479px) {
+    @media screen and (min-width: $break-xs) {
+      width: 100%;
+  }
+    @media screen and (min-width: 479px) {
       width: 90%;
+    }
+    @media screen and (min-width: $break-l) {
+      width: 70%;
     }
 }
 .container-nav
