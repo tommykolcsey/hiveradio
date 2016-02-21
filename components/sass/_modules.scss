@@ -65,7 +65,6 @@
 
 .hex {
 	@include transitionAll(.25s);
-    display: block;
     background: url('../img/hexagon.png') no-repeat center;
     width: 230px;
     height: 200px;
@@ -109,7 +108,7 @@
         z-index: 1;
         li {
             background: $light-black;
-            box-sizing: border-box;
+            @include boxSizing;
             height: 50px;
             padding-right: 10px;
             border-right: 5px solid $orange;
@@ -197,7 +196,7 @@
 }//about
 
 #logo-full {
-        box-sizing: border-box;
+        @include boxSizing;
         width: 100%;
         max-width: 292px;
         height: auto;
@@ -265,7 +264,7 @@ table{
     .shows-title{
         @include transitionAll(.25s);
         @include borderRadiusAll(10px);
-        box-sizing: border-box;
+        @include boxSizing;
         background: $light-black;
         color: $orange;
         border: 1px solid $orange;
@@ -296,7 +295,7 @@ table{
     background: $light-black;
     z-index: -10;
     .show-pic {
-        display: block;
+        display: block !important;
         margin:2% auto;
         padding: 0 5%;
         img {
@@ -442,7 +441,7 @@ table{
             }
             
             .member-pic {
-            box-sizing: border-box;
+            @include boxSizing;
             width: 100%;
             height: auto;
             max-width: 440px;
@@ -652,10 +651,11 @@ table{
                 @include flexbox;
                 -webkit-justify-content: center;
                 justify-content: center;
-                -webkit-justify-content: center;
                 align-items: center;
+
             }// arrow container
             .arrow-down {
+            margin:0 auto;
             margin-top: 10px;
             content: '';
             width: 0;
@@ -665,6 +665,7 @@ table{
             border-top: 10px solid $light-black;
             }// arrow-down
             .arrow-right {
+            margin:0 auto;
             content: '';
             width: 0;
             height: 0px;

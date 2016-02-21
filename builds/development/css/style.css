@@ -73,8 +73,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-attachment: fixed;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
@@ -96,7 +94,7 @@ body {
 
 #maincontent {
   flex: 1;
-  -webkit-flex: 1;
+  -webkit-flex: 1 1;
   padding-bottom: 50px; }
 
 footer {
@@ -195,11 +193,15 @@ h4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 16.66666667%; }
   .col-span-xs-10 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 83.3333%; } }
 
 @media (min-width: 480px) {
@@ -207,31 +209,43 @@ h4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 16.66666667%; }
   .col-span-s-4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 33.33333333%; }
   .col-span-s-6 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 50%; }
   .col-span-s-8 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 66.66666667%; }
   .col-span-s-10 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 83.3333%; }
   .col-span-s-12 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 100%; } }
 
 @media (min-width: 768px) {
@@ -239,46 +253,64 @@ h4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 16.66666667%; }
   .col-span-m-3 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 25%; }
   .col-span-m-4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 33.33333333%; }
   .col-span-m-5 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 41.6666%; }
   .col-span-m-6 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 50%; }
   .col-span-m-7 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 58.3333%; }
   .col-span-m-8 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 66.66666667%; }
   .col-span-m-10 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 83.3333%; }
   .col-span-m-12 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 100%; } }
 
 @media (min-width: 992px) {
@@ -286,26 +318,36 @@ h4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 16.66666667%; }
   .col-span-l-4 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 33.33333333%; }
   .col-span-l-6 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 50%; }
   .col-span-l-8 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 66.66666667%; }
   .col-span-l-12 {
     position: relative;
     float: left;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 100%; } }
 
 .sr-only {
@@ -624,13 +666,10 @@ nav {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  display: block;
   background: url("../img/hexagon.png") no-repeat center;
   width: 230px;
   height: 200px;
   float: left;
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
   /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;
@@ -675,6 +714,8 @@ nav {
     .hive-subnav ul li {
       background: #121212;
       box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       height: 50px;
       padding-right: 10px;
       border-right: 5px solid #fdb415; }
@@ -744,6 +785,8 @@ nav {
 
 #logo-full {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   width: 100%;
   max-width: 292px;
   height: auto;
@@ -813,14 +856,14 @@ table {
     /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
     border-radius: 10px;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     background: #121212;
     color: #fdb415;
     border: 1px solid #fdb415;
     margin-bottom: 10px;
     height: 70px;
     text-align: center;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
@@ -849,7 +892,7 @@ table {
   background: #121212;
   z-index: -10; }
   .shows-desc .show-pic {
-    display: block;
+    display: block !important;
     margin: 2% auto;
     padding: 0 5%; }
     .shows-desc .show-pic img {
@@ -962,6 +1005,8 @@ table {
       text-decoration: underline; }
     .members .members-container-desc .members-desc .member-pic {
       box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       width: 100%;
       height: auto;
       max-width: 440px;
@@ -1119,8 +1164,6 @@ table {
   #get-involved .arrow-container {
     min-height: 40px;
     background: #fdb415;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;
     /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;
@@ -1131,9 +1174,9 @@ table {
     /* NEW, Spec - Opera 12.1, Firefox 20+ */
     -webkit-justify-content: center;
     justify-content: center;
-    -webkit-justify-content: center;
     align-items: center; }
   #get-involved .arrow-down {
+    margin: 0 auto;
     margin-top: 10px;
     content: '';
     width: 0;
@@ -1142,6 +1185,7 @@ table {
     border-right: 10px solid transparent;
     border-top: 10px solid #121212; }
   #get-involved .arrow-right {
+    margin: 0 auto;
     content: '';
     width: 0;
     height: 0px;

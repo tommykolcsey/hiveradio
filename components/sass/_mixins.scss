@@ -13,7 +13,6 @@
 @mixin flexbox {
   //SOURCE: https://css-tricks.com/using-flexbox/
 
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
   display: -ms-flexbox;      /* TWEENER - IE 10 */
   display: -webkit-flex;     /* NEW - Chrome */
@@ -47,6 +46,15 @@
   position: relative;
   float: left;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+// Box Sizing ----------------------------------
+@mixin boxSizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 // Border Radius Cross Browser Support ------------------

@@ -42,7 +42,7 @@ body {
 // Sticky Footer Code Adapter From: http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
 #maincontent {
   flex: 1;
-  -webkit-flex: 1;
+  -webkit-flex: 1 1;
   padding-bottom:50px; 
 }
 // End Sticky Footer Code
