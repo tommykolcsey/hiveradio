@@ -1,0 +1,85 @@
+{
+  "name": "tommykolcsey/hiveradio",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Test",
+  "branch": "master",
+  "style": {
+    "name": "Williamsburg",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Montserrat, sans-serif",
+    "heading": {
+      "fontWeight": 600,
+      "letterSpacing": "0.1em"
+    },
+    "colors": {
+      "text": "#346",
+      "background": "#fff",
+      "primary": "#0099e0",
+      "secondary": "#ab61ff",
+      "highlight": "#f7b",
+      "muted": "#fffab3",
+      "border": "#ccd"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/tommykolcsey/hiveradio",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/hiveradio",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "hiveradio",
+      "subhead": "Hive Radio Manchester website redesign. Final year practical project.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "hiveradio: Hive Radio Manchester website redesign. Final year practical project.",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "tommykolcsey",
+          "repo": "hiveradio"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/tommykolcsey/hiveradio",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/tommykolcsey",
+          "text": "tommykolcsey"
+        }
+      ]
+    }
+  ]
+}
